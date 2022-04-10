@@ -43,7 +43,7 @@ app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
 if (process.env.NODE_ENV === "PRODUCTION") {
-  app.use(express.static("ddblog/build"));
+  app.use(express.static("client/build"));
 }
 
 app.listen(process.env.PORT || 5000, () => {
